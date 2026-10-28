@@ -264,3 +264,15 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+doc_events = {
+"Library Member": {
+"validate": "library_management.events.validate_library_member"
+},
+"Library Membership": {
+"validate": "library_management.events.validate_library_membership"
+},
+"Library Transaction": {
+"validate": "library_management.events.validate_library_transaction"
+}
+}
+website_generators = ["Article"]

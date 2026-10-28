@@ -1,0 +1,103 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "has_web_view": 1,
+ "route": "articles",
+ "allow_rename": 1,
+ "creation": "2026-10-27 20:44:43.976788",
+ "custom": 0,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "article_name",
+  "image",
+  "author",
+  "description",
+  "isbn",
+  "status",
+  "publisher",
+  "route",
+  "published"
+ ],
+ "fields": [
+  {
+   "fieldname": "article_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Article Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "author",
+   "fieldtype": "Data",
+   "label": "Author"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "isbn",
+   "fieldtype": "Data",
+   "label": "ISBN"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Issued\nAvailable"
+  },
+  {
+   "fieldname": "publisher",
+   "fieldtype": "Data",
+   "label": "Publisher"
+  },
+    {
+    "fieldname": "route",
+    "fieldtype": "Data",
+    "label": "Route",
+    "unique": 1
+  },
+  {
+    "fieldname": "published",
+    "fieldtype": "Check",
+    "label": "Published",
+    "default": "1"
+  }
+ 
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-27 20:59:52.920934",
+ "modified_by": "athulunnikrishnanmb@gmail.com",
+ "module": "Library Management",
+ "name": "Article",
+ "owner": "athulunnikrishnanmb@gmail.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "article_name"
+}

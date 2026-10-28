@@ -1,0 +1,20 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h1>Library Articles</h1>
+
+<div class="row">
+    {% for article in frappe.get_all("Article", filters={"route": ["!=", ""]}, fields=["article_name", "author", "route", "image"]) %}
+    <div class="col-md-4 mb-4">
+        {% if article.image %}
+        <img src="{{ article.image }}" style="width:100%; max-height:200px; object-fit:cover;">
+        {% endif %}
+        <h3>
+            <a href="/{{ article.route }}">{{ article.article_name }}</a>
+        </h3>
+        <p>By {{ article.author or "Unknown" }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
